@@ -3,6 +3,7 @@
 1. Build and run test cases (mvn clean install)
 2. Before running, if you want to customize your couchbase cluster credentials
    you must change username and password fields in the application.properties file.
+   By default username = sahin, password = sahin123
 3. The App has no frontend side, so you need to use a smart client like Postman.
 4. The App have two model User and Todo
 5. User have three fields username, password and todoList.
