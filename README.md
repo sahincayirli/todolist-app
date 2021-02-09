@@ -1,17 +1,19 @@
 # TodolistApp
 
-1. Build and run test cases (mvn clean install)
-2. Before running, if you want to customize your couchbase cluster credentials
+1. Before everything run the docker. (for testcontainers)
+2. Build and run test cases (mvn clean install)
+3. Before running, if you want to customize your couchbase cluster credentials
    you must change username and password fields in the application.properties file.
    By default username = sahin, password = sahin123
-3. The App has no frontend side, so you need to use a smart client like Postman.
-4. The App have two model User and Todo
-5. User have three fields username, password and todoList.
-6. Todo have also three fields title, description and done.
-7. The App work with Basic Authentication so you must be registered before you logged-in.
-8. The Endpoints
+4. Run the couchbase server on local or on docker container.
+5. The App has no frontend side, so you need to use a smart client like Postman.
+6. The App have two model User and Todo
+7. User have three fields username, password and todoList.
+8. Todo have also three fields title, description and done.
+9. The App work with Basic Authentication so you must be registered before you logged-in.
+10. The Endpoints
   ``` 
-  8.1 request to localhost:8080/register with No Authentication
+  10.1 request to localhost:8080/register with No Authentication
               -- Method : POST
               -- Body   : {
                             "username":"sahin",
@@ -26,7 +28,7 @@
                           }
                         
                         
-     8.2 request to localhost:8080/user/addTodo with Basic Auth (username = "sahin", password = "sahin123")
+     10.2 request to localhost:8080/user/addTodo with Basic Auth (username = "sahin", password = "sahin123")
              -- Method : POST
               -- Body   : {
                             "title":"dishes",
@@ -43,7 +45,7 @@
                                         ]
                           }
                         
-     8.3 request to localhost:8080/user/{title} with Basic Auth (username = "sahin", password = "sahin123")
+     10.3 request to localhost:8080/user/{title} with Basic Auth (username = "sahin", password = "sahin123")
               -- Method : PUT
          response from localhost:8080/user/{title}
               -- Status : 200 (OK)
@@ -54,7 +56,7 @@
                                           "dishes"
                                         ]
                           }
-     8.4 request to localhost:8080/user/{title} with Basic Auth (username = "sahin", password = "sahin123")
+     10.4 request to localhost:8080/user/{title} with Basic Auth (username = "sahin", password = "sahin123")
               -- Method : DELETE
          response from localhost:8080/user/{title}
               -- Status : 200 (OK)
@@ -64,7 +66,7 @@
                             "todoList": []
                           }
                           
-     8.5 request to localhost:8080/user/todoList with Basic Auth (username = "sahin", password = "sahin123")
+     10.5 request to localhost:8080/user/todoList with Basic Auth (username = "sahin", password = "sahin123")
               -- Method : GET
          response from localhost:8080/user/{title}
               -- Status : 200 (OK)
