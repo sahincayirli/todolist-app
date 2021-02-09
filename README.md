@@ -3,7 +3,8 @@
 1. Before everything run the docker. (for testcontainers)
 2. Build and run test cases (mvn clean install)  
    2.1 Sometimes you may see an exception like connection refused in test cases. 
-       It is about testcontainers http wait strategy but dont worry a few seconds later test will pass and app will build succesfully.
+       It is about testcontainers http wait strategy but dont worry  
+       a few seconds later test will pass and app will build succesfully.
 3. Before running, if you want to customize your couchbase cluster credentials
    you must change username and password fields in the application.properties file.
    By default username = sahin, password = sahin123
