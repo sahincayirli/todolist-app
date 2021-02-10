@@ -1,6 +1,9 @@
 # TodolistApp
 
-1. Before everything run the docker. (for testcontainers)
+1. Before everything run the docker engine.
+2. For using Couchbase server you have two choice  
+   2.1 pull the image from https://hub.docker.com/r/sahincayirli19/todolist-image and start the container  
+   2.2 Use the dockerfile in the repository, build and start the container.  
 2. Build and run test cases (mvn clean install)  
    2.1 Sometimes you may see an exception like connection refused in test cases.  
        It is about testcontainers http wait strategy but dont worry  
